@@ -1,0 +1,12 @@
+{
+  "domain": "furrytail",
+  "name": "FurryTail",
+  "version": "0.3.6",
+  "documentation": "https://example.com/furrytail-ha",
+  "iot_class": "cloud_push",
+  "config_flow": true,
+  "codeowners": [],
+  "requirements": [
+    "paho-mqtt>=2.0.0"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to FurryTail",
+        "description": "Paste the access token from the FurryTail app: open Dev Tools, inspect any request, and copy the Authorization header value. The app's token is valid for 30 days. The MAC address is optional.",
+        "data": {
+          "token": "Access token",
+          "mac": "MAC address",
+          "place_id": "Place ID"
+        },
+        "data_description": {
+          "mac": "Optional MAC address of the litter box, for example AA:BB:CC:DD:EE:FF. Use it to select one of multiple paired devices.",
+          "place_id": "Optional place (home) ID from the FurryTail app. Needed for device control; leave empty to auto-detect."
+        }
+      },
+      "reauth_confirm": {
+        "title": "Reauthenticate FurryTail",
+        "description": "Paste a fresh access token from the FurryTail app: open Dev Tools, inspect any request, and copy the Authorization header value. The app's token is valid for 30 days. The MAC address is optional.",
+        "data": {
+          "token": "Access token",
+          "mac": "MAC address",
+          "place_id": "Place ID"
+        },
+        "data_description": {
+          "mac": "Optional MAC address of the litter box, for example AA:BB:CC:DD:EE:FF.",
+          "place_id": "Optional place (home) ID from the FurryTail app. Needed for device control; leave empty to auto-detect."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Unable to connect to FurryTail. Check the connection and try again.",
+      "invalid_auth": "The token is invalid or expired. Paste a fresh token from the FurryTail app.",
+      "already_configured": "This FurryTail account is already configured.",
+      "invalid_mac": "Enter a valid MAC address such as AA:BB:CC:DD:EE:FF."
+    },
+    "abort": {
+      "already_configured": "This FurryTail account is already configured.",
+      "reauth_successful": "Reauthentication was successful."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "FurryTail options",
+        "description": "Choose how often FurryTail is polled when live MQTT updates are unavailable.",
+        "data": {
+          "scan_interval": "Scan interval",
+          "place_id": "Place ID"
+        },
+        "data_description": {
+          "scan_interval": "Polling interval in seconds, from 10 to 300.",
+          "place_id": "Place (home) ID from the FurryTail app. Required for device control."
+        }
+      }
+    }
+  }
+}
